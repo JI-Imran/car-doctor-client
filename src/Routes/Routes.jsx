@@ -27,12 +27,12 @@ const router = createBrowserRouter([
       {
         path: 'book/:id',
         element: <PrivateRoute><BookService /></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://car-doctor-server-r5gz36i5l-imran-hossains-projects.vercel.app/services/${params.id}`)
+        loader: ({ params }) => fetch(`https://car-doctor-server-production-8b56.up.railway.app/services/${params.id}`)
       },
       {
         path: 'bookings',
         element: <PrivateRoute><Bookings /></PrivateRoute>,
-        // loader: ({ params }) => fetch(`https://car-doctor-server-r5gz36i5l-imran-hossains-projects.vercel.app/services/${params.id}`)
+        // loader: ({ params }) => fetch(`https://car-doctor-server-production-8b56.up.railway.app/services/${params.id}`)
       },
     ]
   },

@@ -8,7 +8,7 @@ const Bookings = () => {
     const [bookings, setBookings] = useState([]);
     const navigate = useNavigate();
 
-    const url = `https://car-doctor-server-r5gz36i5l-imran-hossains-projects.vercel.app/bookings?email=${user?.email}`;
+    const url = `https://car-doctor-server-production-8b56.up.railway.app/bookings?email=${user?.email}`;
     useEffect(() => {
         fetch(url, {
             method: 'GET',
@@ -30,7 +30,7 @@ const Bookings = () => {
     const handleDelete = id => {
         const proced = confirm('Are you sure you want to delete');
         if (proced) {
-            fetch(`https://car-doctor-server-r5gz36i5l-imran-hossains-projects.vercel.app/bookings/${id}`, {
+            fetch(`https://car-doctor-server-production-8b56.up.railway.app/bookings/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -46,7 +46,7 @@ const Bookings = () => {
     }
 
     const handleBookingConfirm = id => {
-        fetch(`https://car-doctor-server-r5gz36i5l-imran-hossains-projects.vercel.app/bookings/${id}`, {
+        fetch(`https://car-doctor-server-production-8b56.up.railway.app/bookings/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

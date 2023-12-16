@@ -25,7 +25,7 @@ const BookService = () => {
         }
         console.log(booking);
 
-        fetch('https://car-doctor-server-r5gz36i5l-imran-hossains-projects.vercel.app/bookings', {
+        fetch('https://car-doctor-server-production-8b56.up.railway.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
